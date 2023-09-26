@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <title>Library</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <h1>Library</h1>
+    <script>
+        // Place the JavaScript function here
+        function numberOfBooksRead(library) {
+            // Initialize a count variable to keep track of the number of read books
+            let count = 0;
 
+            // Loop through the library array
+            for (let i = 0; i < library.length; i++) {
+                // Check if the readingStatus property of the current book is true
+                if (library[i].readingStatus === true) {
+                    // If it's true, increment the count
+                    count++;
+                }
+            }
+
+            // Return the count of read books
+            return count;
+        }
+
+        // Example usage:
+        const library = [
+            { author: "Author1", title: "Book1", readingStatus: true },
+            { author: "Author2", title: "Book2", readingStatus: false },
+            { author: "Author3", title: "Book3", readingStatus: true }
+        ];
+
+        const numberOfReadBooks = numberOfBooksRead(library);
+        console.log("Number of read books:", numberOfReadBooks);
+    </script>
 </body>
-
 </html>
